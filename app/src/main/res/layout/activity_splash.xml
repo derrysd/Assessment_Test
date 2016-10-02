@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.SplashActivity">
+    tools:context=".views.SplashActivity">
 
     <ImageView
         android:id="@+id/logo"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/progressBar"
         android:visibility="gone"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="65dp"
         android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

@@ -1,12 +1,25 @@
-package derry.assessmenttest.model;
+package derry.assessmenttest.entities;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Address {
 
+    @SerializedName("street")
+    @Expose
     private String street;
+    @SerializedName("suite")
+    @Expose
     private String suite;
+    @SerializedName("city")
+    @Expose
     private String city;
+    @SerializedName("zipcode")
+    @Expose
     private String zipcode;
-    private Geo Geo;
+    @SerializedName("geo")
+    @Expose
+    private Geo geo;
 
     public String getStreet() {
         return street;
@@ -24,6 +37,7 @@ public class Address {
         this.suite = suite;
     }
 
+
     public String getCity() {
         return city;
     }
@@ -36,15 +50,17 @@ public class Address {
         return zipcode;
     }
 
+
     public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }
 
-    public derry.assessmenttest.model.Geo getGeo() {
-        return Geo;
+
+    public Geo getGeo() {
+        return geo;
     }
 
-    public void setGeo(derry.assessmenttest.model.Geo geo) {
-        Geo = geo;
+    public void setGeo(Geo geo) {
+        this.geo = geo;
     }
 }

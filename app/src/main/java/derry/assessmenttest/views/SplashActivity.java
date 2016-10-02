@@ -1,5 +1,6 @@
-package derry.assessmenttest.view;
+package derry.assessmenttest.views;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,20 +9,17 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import derry.assessmenttest.R;
-import derry.assessmenttest.presenter.SplashPresenter;
-import derry.assessmenttest.presenter.SplashPresenterImpl;
+import derry.assessmenttest.presenters.SplashPresenter;
+import derry.assessmenttest.presenters.SplashPresenterImpl;
+import derry.assessmenttest.utils.SharedPreferencesManager;
 
 public class SplashActivity extends AppCompatActivity implements SplashView{
-    ProgressBar progressBar;
-    SplashPresenter presenter;
-    ImageView logo;
-    SharedPreferences prefs;
-
-    static final String TAG_SHAREDPREFS = "derry.assessmenttest";
-    static final String TAG_SAVEDSTRING = "users";
-
+    private ProgressBar progressBar;
+    private SplashPresenter presenter;
+    private ImageView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +27,8 @@ public class SplashActivity extends AppCompatActivity implements SplashView{
         setContentView(R.layout.activity_splash);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         logo = (ImageView) findViewById(R.id.logo);
-
-        presenter = new SplashPresenterImpl(this);
-
-        prefs = getSharedPreferences(TAG_SHAREDPREFS, MODE_PRIVATE);
+        SharedPreferences prefs = SharedPreferencesManager.createInstance(getApplicationContext()).getPreferences();
+        presenter = new SplashPresenterImpl(this, prefs);
     }
 
     @Override
@@ -53,7 +49,7 @@ public class SplashActivity extends AppCompatActivity implements SplashView{
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                presenter.retrieveData(prefs, TAG_SAVEDSTRING);
+                presenter.initData();
                 logo.setVisibility(View.VISIBLE);
             }
 
@@ -73,4 +69,16 @@ public class SplashActivity extends AppCompatActivity implements SplashView{
     public void hideLoading() {
         progressBar.setVisibility(View.GONE);
     }
+
+    @Override
+    public void goToMainActivity() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
+
+    @Override
+    public void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
 }

@@ -1,8 +1,15 @@
-package derry.assessmenttest.model;
+package derry.assessmenttest.entities;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Geo {
 
+    @SerializedName("lat")
+    @Expose
     private String lat;
+    @SerializedName("lng")
+    @Expose
     private String lng;
 
     public String getLat() {
@@ -20,4 +27,5 @@ public class Geo {
     public void setLng(String lng) {
         this.lng = lng;
     }
+
 }

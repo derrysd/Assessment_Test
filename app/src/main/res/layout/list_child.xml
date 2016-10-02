@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingTop="1dp">
+        <ImageView
+            android:layout_gravity="bottom"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_address"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="Address"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="Street"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/contact_street"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Pandawa"
+            android:gravity="end"
+            android:paddingRight="12dp"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="Suite"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/contact_suite"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Rumah"
+            android:gravity="right"
+            android:paddingRight="12dp"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="City"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/contact_city"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Bekasi"
+            android:gravity="right"
+            android:paddingRight="12dp"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="Zipcode"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/contact_zipcode"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="123123"
+            android:gravity="right"
+            android:paddingRight="12dp"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="Geo"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Lat :"
+            android:gravity="right"
+            android:paddingRight="12dp"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/contact_geo_lat"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="-37.3159"
+            android:paddingRight="12dp"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Lang :"
+            android:gravity="right"
+            android:paddingRight="12dp"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/contact_geo_lang"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="-37.3159"
+            android:gravity="right"
+            android:paddingRight="12dp"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingTop="1dp">
+
+        <ImageView
+            android:layout_gravity="bottom"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_phone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Phone"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/contact_phone"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="1-770-736-8031 x56442"
+            android:gravity="right"
+            android:paddingRight="12dp"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingTop="1dp">
+
+        <ImageView
+            android:layout_gravity="bottom"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_website"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Website"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/contact_website"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="website.com"
+            android:gravity="right"
+            android:paddingRight="12dp"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingTop="1dp">
+
+        <ImageView
+            android:layout_gravity="bottom"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_company"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Company"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="Name"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/contact_company_name"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Pandawa"
+            android:gravity="end"
+            android:paddingRight="12dp"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="Catch Phrase"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/contact_company_catchphrase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Multi-layered client-server neural-net"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="BS"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/contact_company_bs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="harness real-time e-markets"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>
