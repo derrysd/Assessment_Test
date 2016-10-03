@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="12dp"
         android:paddingTop="1dp">
         <ImageView
             android:layout_gravity="bottom"
@@ -21,21 +20,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            tools:text="Address"
+            android:text="@string/contact_address"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
+        android:paddingLeft="25dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            tools:text="Street"
+            android:text="@string/contact_address_street"
             android:paddingLeft="3dp"/>
 
         <TextView
@@ -45,21 +44,20 @@
             android:layout_height="wrap_content"
             tools:text="Pandawa"
             android:gravity="end"
-            android:paddingRight="12dp"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
+        android:paddingLeft="25dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            tools:text="Suite"
+            android:text="@string/contact_address_suite"
             android:paddingLeft="3dp"/>
 
         <TextView
@@ -68,22 +66,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="Rumah"
-            android:gravity="right"
-            android:paddingRight="12dp"
+            android:gravity="end"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
+        android:paddingLeft="25dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            tools:text="City"
+            android:text="@string/contact_address_city"
             android:paddingLeft="3dp"/>
 
         <TextView
@@ -92,22 +89,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="Bekasi"
-            android:gravity="right"
-            android:paddingRight="12dp"
+            android:gravity="end"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
+        android:paddingLeft="25dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            tools:text="Zipcode"
+            android:text="@string/contact_address_zipcode"
             android:paddingLeft="3dp"/>
 
         <TextView
@@ -116,31 +112,29 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="123123"
-            android:gravity="right"
-            android:paddingRight="12dp"
+            android:gravity="end"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
+        android:paddingLeft="25dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            tools:text="Geo"
+            android:text="@string/contact_address_geo"
             android:paddingLeft="3dp"/>
 
         <TextView
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="Lat :"
-            android:gravity="right"
-            android:paddingRight="12dp"
+            android:text="@string/contact_address_geo_lat"
+            android:gravity="end"
             android:paddingLeft="3dp"/>
 
         <TextView
@@ -149,16 +143,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="-37.3159"
-            android:paddingRight="12dp"
-            android:paddingLeft="3dp"/>
+            android:paddingLeft="10dp"/>
 
         <TextView
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="Lang :"
-            android:gravity="right"
-            android:paddingRight="12dp"
+            android:text="@string/contact_address_geo_lng"
+            android:gravity="end"
             android:paddingLeft="3dp"/>
 
         <TextView
@@ -167,8 +159,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="-37.3159"
-            android:gravity="right"
-            android:paddingRight="12dp"
+            android:gravity="end"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 
@@ -176,7 +167,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="12dp"
         android:paddingTop="1dp">
 
         <ImageView
@@ -188,7 +178,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Phone"
+            android:text="@string/contact_phone"
             android:paddingLeft="3dp"/>
 
         <TextView
@@ -197,8 +187,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="1-770-736-8031 x56442"
-            android:gravity="right"
-            android:paddingRight="12dp"
+            android:gravity="end"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 
@@ -206,7 +195,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="12dp"
         android:paddingTop="1dp">
 
         <ImageView
@@ -218,7 +206,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Website"
+            android:text="@string/contact_website"
             android:paddingLeft="3dp"/>
 
         <TextView
@@ -227,8 +215,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="website.com"
-            android:gravity="right"
-            android:paddingRight="12dp"
+            android:gravity="end"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 
@@ -236,7 +223,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="12dp"
         android:paddingTop="1dp">
 
         <ImageView
@@ -248,21 +234,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Company"
+            android:text="@string/contact_company"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
+        android:paddingLeft="25dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            tools:text="Name"
+            android:text="@string/contact_company_name"
             android:paddingLeft="3dp"/>
 
         <TextView
@@ -272,21 +258,20 @@
             android:layout_height="wrap_content"
             tools:text="Pandawa"
             android:gravity="end"
-            android:paddingRight="12dp"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
+        android:paddingLeft="25dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            tools:text="Catch Phrase"
+            android:text="@string/contact_company_catchphrase"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 
@@ -301,14 +286,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
+        android:paddingLeft="25dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            tools:text="BS"
+            android:text="@string/contact_company_bs"
             android:paddingLeft="3dp"/>
     </LinearLayout>
 

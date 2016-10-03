@@ -61,7 +61,6 @@ public class UsersFragment extends Fragment implements MainView{
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-//        ItemAdapter itemAdapter = new ItemAdapter(presenter.getData(), view.getContext());
         simpleAdapter = new SimpleAdapter(presenter.getData(), view.getContext());
         recyclerView.setAdapter(simpleAdapter);
 

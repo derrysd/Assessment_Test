@@ -9,6 +9,26 @@
     <string name="drawer_menu_about">About</string>
     <string name="drawer_menu_exit">Exit</string>
 
-    <string name="hint_search">Search Name, Username or Email</string>
+    <string name="hint_search">Search Name, Username or Email..</string>
+    <string name="contact_username">Username</string>
+    <string name="contact_email">Email</string>
+
+    <string name="contact_address">Address</string>
+    <string name="contact_address_street">Street</string>
+    <string name="contact_address_suite">Suite</string>
+    <string name="contact_address_city">City</string>
+    <string name="contact_address_zipcode">Zipcode</string>
+
+    <string name="contact_address_geo">Geo</string>
+    <string name="contact_address_geo_lat">Lat :</string>
+    <string name="contact_address_geo_lng">Lang :</string>
+
+    <string name="contact_phone">Phone</string>
+    <string name="contact_website">Website</string>
+    <string name="contact_company">Company</string>
+    <string name="contact_company_name">Name</string>
+    <string name="contact_company_catchphrase">CatchPhrase</string>
+    <string name="contact_company_bs">BS</string>
+
 
 </resources>
