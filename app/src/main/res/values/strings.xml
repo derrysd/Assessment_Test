@@ -3,6 +3,7 @@
     <string name="desc_logo">Logo</string>
     <string name="title_activity_main">Main Activity</string>
 
+    <string name="navigation_title">Navigation Menu</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="drawer_menu_users">Users</string>
@@ -30,5 +31,21 @@
     <string name="contact_company_catchphrase">CatchPhrase</string>
     <string name="contact_company_bs">BS</string>
 
+    <string name="dialog_error_title">Error Retrieveing Data</string>
+    <string name="dialog_error_message">Please check your network connectivity or wi-fi connection.</string>
+    <string name="dialog_error_retry">Retry</string>
+    <string name="dialog_error_exit">Exit</string>
 
+    <string name="dialog_exit_title">Exit Application</string>
+    <string name="dialog_exit_message">Do you want to exit application?</string>
+    <string name="dialog_exit_yes">Yes</string>
+    <string name="dialog_exit_no">No</string>
+
+    <string name="loading_text">Loading…</string>
+
+    <string name="profile_address">Bekasi, Jawa Barat, Indonesia | ID</string>
+    <string name="summary">Summary</string>
+    <string name="number_email">+62888–0870–1494 | derrysd@gmail.com</string>
+    <string name="profile_name">Derry Surya Dwitama</string>
+    <string name="hobby">Hobby</string>
 </resources>

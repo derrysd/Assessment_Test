@@ -26,7 +26,7 @@ import derry.assessmenttest.entities.User;
 import derry.assessmenttest.presenters.MainPresenter;
 import derry.assessmenttest.presenters.MainPresenterImpl;
 import derry.assessmenttest.utils.SharedPreferencesManager;
-import derry.assessmenttest.views.Adapter.SimpleAdapter;
+import derry.assessmenttest.views.Adapter.CustomAdapter;
 
 
 public class UsersFragment extends Fragment implements MainView{
@@ -34,13 +34,11 @@ public class UsersFragment extends Fragment implements MainView{
     private ImageButton buttonClear;
     private EditText editTextSearch;
     private MainPresenter presenter;
-    private SimpleAdapter simpleAdapter;
+    private CustomAdapter customAdapter;
     private Context context;
 
-//    private OnFragmentInteractionListener mListener;
-
     public UsersFragment() {
-        // Required empty public constructor
+
     }
 
     @Override
@@ -50,8 +48,7 @@ public class UsersFragment extends Fragment implements MainView{
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_users, container, false);
         context = view.getContext().getApplicationContext();
 
@@ -61,14 +58,13 @@ public class UsersFragment extends Fragment implements MainView{
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        simpleAdapter = new SimpleAdapter(presenter.getData(), view.getContext());
-        recyclerView.setAdapter(simpleAdapter);
+        customAdapter = new CustomAdapter(presenter.getData(), view.getContext());
+        recyclerView.setAdapter(customAdapter);
 
         buttonClear = (ImageButton) view.findViewById(R.id.button_clear);
         buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // presenter.searchdata
                 editTextSearch.setText("");
                 hideSoftKeyboard();
             }
@@ -86,25 +82,17 @@ public class UsersFragment extends Fragment implements MainView{
                 return false;
             }
         });
-
         return view;
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-//        mListener = null;
     }
 
     private TextWatcher searchButtonTextWatcher = new TextWatcher() {
@@ -131,9 +119,9 @@ public class UsersFragment extends Fragment implements MainView{
             }
 
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            simpleAdapter = new SimpleAdapter(filteredList, context);
-            recyclerView.setAdapter(simpleAdapter);
-            simpleAdapter.notifyDataSetChanged();  // data set changed
+            customAdapter = new CustomAdapter(filteredList, context);
+            recyclerView.setAdapter(customAdapter);
+            customAdapter.notifyDataSetChanged();
         }
 
         @Override
@@ -146,10 +134,4 @@ public class UsersFragment extends Fragment implements MainView{
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(editTextSearch.getWindowToken(), 0);
     }
-
-//    public interface OnFragmentInteractionListener {
-//        // TODO: Update argument type and name
-//        void onFragmentInteraction(Uri uri);
-//    }
-
 }

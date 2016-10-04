@@ -47,9 +47,8 @@ public class SplashPresenterImpl implements SplashPresenter, UsersModel.OnFetchD
 
     @Override
     public void onFetchDataFailure(String message) {
-        // TODO: 28/09/2016  buat dialog network failed
         Log.e("LOG_INFO", "Error Load JSON from API: " + message);
-        splashView.showToast("Load Failed");
+        splashView.showErrorFetchDialog(message);
         splashView.hideLoading();
     }
 

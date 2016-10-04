@@ -1,10 +1,13 @@
 package derry.assessmenttest.views.Adapter;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import java.util.List;
@@ -12,11 +15,12 @@ import java.util.List;
 import derry.assessmenttest.R;
 import derry.assessmenttest.entities.User;
 
-public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHolder> {
-    List<User> users;
-    Context context;
+public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
+    private List<User> users;
+    private Context context;
+    private int lastPosition = -1;
 
-    public SimpleAdapter(List<User> users, Context context) {
+    public CustomAdapter(List<User> users, Context context) {
         this.users = users;
         this.context = context;
     }
@@ -44,10 +48,10 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
         holder.website.setText(users.get(position).getWebsite());
 
         holder.companyName.setText(users.get(position).getCompany().getName());
-        holder.catchphrase.setText(users.get(position).getCompany().getCatchPhrase());
+        String cathPhrase = "\"" + users.get(position).getCompany().getCatchPhrase() + "\"";
+        holder.catchphrase.setText(cathPhrase);
         holder.bs.setText(users.get(position).getCompany().getBs());
-
-
+        setAnimation(holder.cardItem, position);
     }
 
     @Override
@@ -60,16 +64,34 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
         return position;
     }
 
+    @Override
+    public void onViewDetachedFromWindow(MyViewHolder holder) {
+        holder.clearAnimation();
+    }
+
+    private void setAnimation(View viewToAnimate, int position)
+    {
+        // If the bound view wasn't previously displayed on screen, it's animated
+        if (position > lastPosition)
+        {
+            Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
+            viewToAnimate.startAnimation(animation);
+            lastPosition = position;
+        }
+    }
+
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         private TextView name, email, username;
         private TextView street, suite, city, zipcode, lat, lng;
         private TextView phone, website;
         private TextView companyName, catchphrase, bs;
-
+        private CardView cardItem;
+        private View rootLayout;
 
         public MyViewHolder(View itemLayoutView) {
             super(itemLayoutView);
+            cardItem = (CardView) itemLayoutView.findViewById(R.id.card_item);
 
             name = (TextView) itemLayoutView.findViewById(R.id.contact_name);
             email = (TextView) itemLayoutView.findViewById(R.id.contact_email);
@@ -89,6 +111,12 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.MyViewHold
             catchphrase = (TextView) itemLayoutView.findViewById(R.id.contact_company_catchphrase);
             bs = (TextView) itemLayoutView.findViewById(R.id.contact_company_bs);
 
+            rootLayout = itemLayoutView.getRootView();
+        }
+
+
+        public void clearAnimation() {
+            rootLayout.clearAnimation();
         }
     }
 }

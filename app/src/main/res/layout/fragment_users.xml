@@ -2,12 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="derry.assessmenttest.views.UsersFragment">
+    tools:context="derry.assessmenttest.views.UsersFragment"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
         <RelativeLayout
             android:id="@+id/layout_search"
             android:layout_width="match_parent"
@@ -28,7 +33,8 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_clear"
                 android:visibility="gone"
-                tools:visibility="visible"/>
+                tools:visibility="visible"
+                android:contentDescription="@string/desc_logo" />
 
             <EditText
                 android:id="@+id/edittext_search"
@@ -50,6 +56,7 @@
             android:paddingBottom="@dimen/vertical_margin_half"
             android:paddingTop="@dimen/vertical_margin_half"
             android:scrollbars="vertical"
+            android:background="@color/very_light_grey"
             tools:listitem="@layout/item_user" />
     </LinearLayout>
 

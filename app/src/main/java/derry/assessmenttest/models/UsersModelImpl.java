@@ -67,7 +67,7 @@ public class UsersModelImpl implements UsersModel {
             @Override
             public void onFailure(Call<List<User>> call, Throwable t) {
                 Log.e("LOG_ERROR", "Failed to retrieve JSON");
-                listener.onFetchDataFailure(t.toString());
+                listener.onFetchDataFailure(t.getMessage());
             }
         });
 

@@ -6,5 +6,5 @@ public interface SplashView {
     void showLoading();
     void hideLoading();
     void goToMainActivity();
-    void showToast(String message);
+    void showErrorFetchDialog(String errorMessage);
 }

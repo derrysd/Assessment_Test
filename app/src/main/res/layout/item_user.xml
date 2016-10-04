@@ -8,7 +8,8 @@
     android:layout_marginRight="@dimen/vertical_margin"
     android:layout_marginTop="@dimen/vertical_margin_half"
     android:elevation="5dp"
-    card_view:cardCornerRadius="2dp">
+    card_view:cardCornerRadius="4dp"
+    android:id="@+id/card_item">
 
     <com.silencedut.expandablelayout.ExpandableLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,7 +19,7 @@
         app:expExpandScrollTogether = "false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:paddingBottom="@dimen/padding_contact">
 
         <include layout="@layout/list_parent"/>
 

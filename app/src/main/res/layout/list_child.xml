@@ -4,182 +4,226 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_contact"
+    android:paddingRight="@dimen/padding_contact">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/very_light_grey"
+        android:layout_marginBottom="@dimen/padding_contact_item"
+        android:layout_marginTop="@dimen/padding_contact_item"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_address"
+        android:drawableLeft="@drawable/ic_address"
+        android:drawablePadding="3dp"
+        tools:ignore="RtlHardcoded" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="1dp">
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        tools:ignore="RtlHardcoded,RtlSymmetry">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/very_light_grey"
+            android:layout_marginBottom="@dimen/padding_contact_sub_item"
+            android:layout_marginTop="@dimen/padding_contact_sub_item"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/contact_address_street"
+                android:paddingLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/contact_street"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Pandawa"
+                android:gravity="end"
+                android:paddingLeft="3dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/very_light_grey"
+            android:layout_marginBottom="@dimen/padding_contact_sub_item"
+            android:layout_marginTop="@dimen/padding_contact_sub_item"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/contact_address_suite"
+                android:paddingLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/contact_suite"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Rumah"
+                android:gravity="end"
+                android:paddingLeft="3dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/very_light_grey"
+            android:layout_marginBottom="@dimen/padding_contact_sub_item"
+            android:layout_marginTop="@dimen/padding_contact_sub_item"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/contact_address_city"
+                android:paddingLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/contact_city"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Bekasi"
+                android:gravity="end"
+                android:paddingLeft="3dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/very_light_grey"
+            android:layout_marginBottom="@dimen/padding_contact_sub_item"
+            android:layout_marginTop="@dimen/padding_contact_sub_item"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/contact_address_zipcode"
+                android:paddingLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/contact_zipcode"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="123123"
+                android:gravity="end"
+                android:paddingLeft="3dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/very_light_grey"
+            android:layout_marginBottom="@dimen/padding_contact_sub_item"
+            android:layout_marginTop="@dimen/padding_contact_sub_item"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/contact_address_geo"
+                android:paddingLeft="3dp"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_address_geo_lat"
+                android:gravity="end"
+                android:paddingLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/contact_geo_lat"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="-37.3159"
+                android:maxLines="1"
+                android:paddingLeft="10dp"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_address_geo_lng"
+                android:gravity="end"
+                android:paddingLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/contact_geo_lang"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="-37.3159"
+                android:maxLines="1"
+                android:gravity="end"
+                android:paddingLeft="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/very_light_grey"
+        android:layout_marginBottom="@dimen/padding_contact_item"
+        android:layout_marginTop="@dimen/padding_contact_item"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <ImageView
             android:layout_gravity="bottom"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@drawable/ic_address"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="@string/contact_address"
-            android:paddingLeft="3dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:orientation="horizontal">
+            android:src="@drawable/ic_phone"
+            android:contentDescription="@string/desc_logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="@string/contact_address_street"
-            android:paddingLeft="3dp"/>
-
-        <TextView
-            android:id="@+id/contact_street"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            tools:text="Pandawa"
-            android:gravity="end"
-            android:paddingLeft="3dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="@string/contact_address_suite"
-            android:paddingLeft="3dp"/>
-
-        <TextView
-            android:id="@+id/contact_suite"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            tools:text="Rumah"
-            android:gravity="end"
-            android:paddingLeft="3dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="@string/contact_address_city"
-            android:paddingLeft="3dp"/>
-
-        <TextView
-            android:id="@+id/contact_city"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            tools:text="Bekasi"
-            android:gravity="end"
-            android:paddingLeft="3dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="@string/contact_address_zipcode"
-            android:paddingLeft="3dp"/>
-
-        <TextView
-            android:id="@+id/contact_zipcode"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            tools:text="123123"
-            android:gravity="end"
-            android:paddingLeft="3dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="@string/contact_address_geo"
-            android:paddingLeft="3dp"/>
-
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/contact_address_geo_lat"
-            android:gravity="end"
-            android:paddingLeft="3dp"/>
-
-        <TextView
-            android:id="@+id/contact_geo_lat"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            tools:text="-37.3159"
-            android:paddingLeft="10dp"/>
-
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/contact_address_geo_lng"
-            android:gravity="end"
-            android:paddingLeft="3dp"/>
-
-        <TextView
-            android:id="@+id/contact_geo_lang"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            tools:text="-37.3159"
-            android:gravity="end"
-            android:paddingLeft="3dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="1dp">
-
-        <ImageView
-            android:layout_gravity="bottom"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:src="@drawable/ic_phone"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/contact_phone"
-            android:paddingLeft="3dp"/>
+            android:text="@string/contact_phone"/>
 
         <TextView
             android:id="@+id/contact_phone"
@@ -187,27 +231,34 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="1-770-736-8031 x56442"
-            android:gravity="end"
-            android:paddingLeft="3dp"/>
+            android:gravity="end"/>
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/very_light_grey"
+        android:layout_marginBottom="@dimen/padding_contact_item"
+        android:layout_marginTop="@dimen/padding_contact_item"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="1dp">
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_gravity="bottom"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@drawable/ic_website"/>
+            android:src="@drawable/ic_website"
+            android:contentDescription="@string/desc_logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/contact_website"
-            android:paddingLeft="3dp"/>
+            android:paddingLeft="3dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
 
         <TextView
             android:id="@+id/contact_website"
@@ -216,86 +267,42 @@
             android:layout_height="wrap_content"
             tools:text="website.com"
             android:gravity="end"
-            android:paddingLeft="3dp"/>
+            android:paddingLeft="3dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
     </LinearLayout>
 
-    <LinearLayout
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/very_light_grey"
+        android:layout_marginBottom="@dimen/padding_contact_item"
+        android:layout_marginTop="@dimen/padding_contact_item"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_company"
+        android:drawableLeft="@drawable/ic_company"
+        android:drawablePadding="3dp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/contact_company_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="1dp">
-
-        <ImageView
-            android:layout_gravity="bottom"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:src="@drawable/ic_company"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/contact_company"
-            android:paddingLeft="3dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="@string/contact_company_name"
-            android:paddingLeft="3dp"/>
-
-        <TextView
-            android:id="@+id/contact_company_name"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            tools:text="Pandawa"
-            android:gravity="end"
-            android:paddingLeft="3dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="@string/contact_company_catchphrase"
-            android:paddingLeft="3dp"/>
-    </LinearLayout>
+        tools:text="Pandawa"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"/>
 
     <TextView
         android:id="@+id/contact_company_catchphrase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Multi-layered client-server neural-net"
+        tools:text="'Multi-layered client-server neural-net'"
         android:gravity="center"
+        android:textStyle="italic|bold"
+        android:textSize="15sp"
         android:layout_gravity="center_horizontal"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="@string/contact_company_bs"
-            android:paddingLeft="3dp"/>
-    </LinearLayout>
 
     <TextView
         android:id="@+id/contact_company_bs"

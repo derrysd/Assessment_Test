@@ -8,66 +8,95 @@
     android:orientation="vertical">
 
     <TextView
+        android:paddingLeft="@dimen/padding_contact"
+        android:paddingRight="@dimen/padding_contact"
+        android:paddingTop="@dimen/padding_contact"
         android:id="@+id/contact_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:maxLines="1"
-        android:paddingBottom="1dp"
         android:textSize="20sp"
-        tools:text="Name of User"/>
+        android:textStyle="bold"
+        tools:text="Name of User"
+        android:textColor="@color/colorPrimaryText"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"/>
 
     <LinearLayout
+        android:paddingLeft="@dimen/padding_contact"
+        android:paddingRight="@dimen/padding_contact"
+        android:paddingTop="@dimen/vertical_margin_half"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_gravity="bottom"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:src="@drawable/ic_username"/>
-        <TextView
-            android:layout_width="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="@string/contact_username"
-            android:paddingLeft="3dp"/>
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_contact_item">
 
-        <TextView
-            android:id="@+id/contact_username"
-            android:layout_weight="1"
-            android:layout_width="0dp"
+            <ImageView
+                android:layout_gravity="bottom"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_username"
+                android:contentDescription="@string/desc_logo" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/contact_username"
+                android:paddingLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/contact_username"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="user1284"
+                android:gravity="end"
+                android:paddingLeft="3dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/very_light_grey"
+            android:layout_marginBottom="@dimen/padding_contact_item"
+            android:layout_marginTop="@dimen/padding_contact_item"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="user1284"
-            android:gravity="end"
-            android:paddingLeft="3dp"/>
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_gravity="bottom"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_email"
+                android:contentDescription="@string/desc_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_email"
+                android:paddingLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/contact_email"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="myemailname@email.com"
+                android:gravity="end"
+                android:paddingLeft="3dp"/>
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="1dp">
 
-        <ImageView
-            android:layout_gravity="bottom"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:src="@drawable/ic_email"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/contact_email"
-            android:paddingLeft="3dp"/>
-
-        <TextView
-            android:id="@+id/contact_email"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            tools:text="myemailname@email.com"
-            android:gravity="end"
-            android:paddingLeft="3dp"/>
-    </LinearLayout>
 </LinearLayout>
